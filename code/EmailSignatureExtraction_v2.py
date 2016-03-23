@@ -247,7 +247,7 @@ def evaluate_model(target_actual, target_predicted, print_confusion=False):
     recall = float(tp) / float(tp+fn+1)
     Fscore = (2*recall*precision) / (recall + precision + 0.00001)
     if print_confusion:
-        print str(model)
+        #print str(model)
         print "predicted:\tpos\tneg"
         print "actual:"
         print "pos\t\t%d\t%d" % (tp, fn)
