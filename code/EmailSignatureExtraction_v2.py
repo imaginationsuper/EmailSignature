@@ -24,6 +24,10 @@ def main():
     data_pos, data_neg = data_filter(data_pos), data_filter(data_neg)
     #data_size = max(len(data_pos), len(data_neg))
     for test_mode in range(2):
+        if test_mode == 0:
+            print "non-SMOTE"
+        else:
+            print "SMOTE"
         sFscores, sRecalls, sPrecisions = list(), list(), list()
         for iteration in range(NUM_OF_ITERATION): # start iteration
             random.seed(iteration)
@@ -35,7 +39,7 @@ def main():
                       "DT": sklearn.tree.DecisionTreeClassifier(), \
                       "NBayes": sklearn.naive_bayes.GaussianNB(), \
                       "NNeighbors": sklearn.neighbors.nearest_centroid.NearestCentroid()}
-            model_chosen = "NNeighbors"
+            model_chosen = "SVC"
             accuracys, precisions, recalls, Fscores = cross_validationS(\
                 data_pos_vec, data_neg_vec, models[model_chosen], num_cross=NUM_OF_CROSSFOLD, smote_flag=test_mode) # cross validation
             sFscores.extend(Fscores)
@@ -152,7 +156,7 @@ def feature_extraction_Doc2Vec(data_pos, data_neg): # use the word2vec under the
         data_neg_vec.append(doc_vec.tolist())
     return data_pos_vec, data_neg_vec
 
-def cross_validation(dataset_pos, dataset_neg, model, num_cross, smote_flag=False):
+def cross_validation(dataset_pos, dataset_neg, model, num_cross, smote_flag=0):
     target = [1] * len(dataset_pos) + [0] * len(dataset_neg)
     data_set = dataset_pos + dataset_neg
     accuracys = sklearn.cross_validation.cross_val_score(model, data_set, target, scoring="accuracy", cv=num_cross)
@@ -161,7 +165,7 @@ def cross_validation(dataset_pos, dataset_neg, model, num_cross, smote_flag=Fals
     Fscores = sklearn.cross_validation.cross_val_score(model, data_set, target, scoring="f1_weighted", cv=num_cross)
     return accuracys.tolist(), precisions.tolist(), recalls.tolist(), Fscores.tolist()
 
-def cross_validationS(dataset_pos, dataset_neg, model, num_cross, smote_flag=False):
+def cross_validationS(dataset_pos, dataset_neg, model, num_cross, smote_flag=0):
     data_size = len(dataset_pos) + len(dataset_neg)
     unit_size = int(data_size*1.0 / num_cross)
     dataset_pos_vec = [entry+["pos"] for entry in dataset_pos]
