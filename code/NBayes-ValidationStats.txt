@@ -1,0 +1,11 @@
+******** Evaluation **********
+no-SMOTE
+	 p_median 	 r_median 	 f_median 
+	0.60119 	0.73171 	0.68382 
+	 iqr_p 	 iqr_r 	 iqr_f 
+	0.00909 	0.01415 	0.02928 
+SMOTE
+	 p_median 	 r_median 	 f_median 
+	0.00000 	0.00000 	0.00000 
+	 iqr_p 	 iqr_r 	 iqr_f 
+	0.00000 	0.00000 	0.00000 
