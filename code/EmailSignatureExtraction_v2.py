@@ -30,20 +30,14 @@ def main():
             random.shuffle(data_pos)
             random.shuffle(data_neg)
             data_pos_vec, data_neg_vec = feature_extraction_Doc2Vec(data_pos, data_neg) # convert to Word Vectors
-            size_pos, size_neg = len(data_pos_vec), len(data_neg_vec)
-            if test_mode == 1: # apply SMOTE
-                if (size_pos > size_neg*(1+SIZE_DIFF_TOL)): # check size and apply SMOTE
-                    data_neg_vec = SMOTE(data_neg_vec, size_pos, num_neighbors=3)
-                elif (size_neg > size_pos*(1+SIZE_DIFF_TOL)):
-                    data_pos_vec = SMOTE(data_pos_vec, size_neg, num_neighbors=3)
             models = {"SVC": sklearn.svm.SVC(), \
                       "Logit": sklearn.linear_model.LogisticRegression(), \
                       "DT": sklearn.tree.DecisionTreeClassifier(), \
                       "NBayes": sklearn.naive_bayes.GaussianNB(), \
                       "NNeighbors": sklearn.neighbors.nearest_centroid.NearestCentroid()}
-            model_chosen = "DT"
+            model_chosen = "NNeighbors"
             accuracys, precisions, recalls, Fscores = cross_validationS(\
-                data_pos_vec, data_neg_vec, models[model_chosen], num_cross=NUM_OF_CROSSFOLD) # cross validation
+                data_pos_vec, data_neg_vec, models[model_chosen], num_cross=NUM_OF_CROSSFOLD, smote_flag=test_mode) # cross validation
             sFscores.extend(Fscores)
             sRecalls.extend(recalls)
             sPrecisions.extend(precisions)
@@ -158,7 +152,7 @@ def feature_extraction_Doc2Vec(data_pos, data_neg): # use the word2vec under the
         data_neg_vec.append(doc_vec.tolist())
     return data_pos_vec, data_neg_vec
 
-def cross_validation(dataset_pos, dataset_neg, model, num_cross):
+def cross_validation(dataset_pos, dataset_neg, model, num_cross, smote_flag=False):
     target = [1] * len(dataset_pos) + [0] * len(dataset_neg)
     data_set = dataset_pos + dataset_neg
     accuracys = sklearn.cross_validation.cross_val_score(model, data_set, target, scoring="accuracy", cv=num_cross)
@@ -167,7 +161,7 @@ def cross_validation(dataset_pos, dataset_neg, model, num_cross):
     Fscores = sklearn.cross_validation.cross_val_score(model, data_set, target, scoring="f1_weighted", cv=num_cross)
     return accuracys.tolist(), precisions.tolist(), recalls.tolist(), Fscores.tolist()
 
-def cross_validationS(dataset_pos, dataset_neg, model, num_cross):
+def cross_validationS(dataset_pos, dataset_neg, model, num_cross, smote_flag=False):
     data_size = len(dataset_pos) + len(dataset_neg)
     unit_size = int(data_size*1.0 / num_cross)
     dataset_pos_vec = [entry+["pos"] for entry in dataset_pos]
@@ -205,6 +199,19 @@ def cross_validationS(dataset_pos, dataset_neg, model, num_cross):
             else:
                 train_dataset.extend(crossfold_dataset[i])
                 train_target.extend(crossfold_target[i])
+        if smote_flag == 1:
+            train_pos_dataset = [entry for index, entry in enumerate(train_dataset) if train_target[index]=="pos"]
+            train_neg_dataset = [entry for index, entry in enumerate(train_dataset) if train_target[index]=="neg"]
+            size_pos = len(train_pos_dataset)
+            size_neg = len(train_neg_dataset)
+            if (size_pos > size_neg*(1+SIZE_DIFF_TOL)): # check size and apply SMOTE
+                train_neg_dataset = SMOTE(train_neg_dataset, size_pos, num_neighbors=3)
+            elif (size_neg > size_pos*(1+SIZE_DIFF_TOL)):
+                train_pos_dataset = SMOTE(train_pos_dataset, size_neg, num_neighbors=3)
+            size_pos = len(train_pos_dataset)
+            size_neg = len(train_neg_dataset)
+            train_dataset = train_pos_dataset + train_neg_dataset
+            train_target = size_pos*["pos"] + size_neg*["neg"]
         model_fit = build_model(train_dataset, train_target, model) # training
         valid_predicted = model_fit.predict(valid_dataset).tolist()
         accuracy, precision, recall, Fscore = evaluate_model(valid_target, valid_predicted) # validation
