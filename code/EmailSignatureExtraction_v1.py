@@ -41,7 +41,7 @@ def main():
                       "DT": sklearn.tree.DecisionTreeClassifier(), \
                       "NBayes": sklearn.naive_bayes.GaussianNB(), \
                       "NNeighbors": sklearn.neighbors.nearest_centroid.NearestCentroid()}
-            model_chosen = "NBayes"
+            model_chosen = "NNeighbors"
             accuracys, precisions, recalls, Fscores = cross_validationS(\
                 data_pos_vec, data_neg_vec, models[model_chosen], num_cross=NUM_OF_CROSSFOLD) # cross validation
             sFscores.extend(Fscores)
@@ -61,8 +61,8 @@ def main():
     plt.legend(loc=4, borderaxespad=0.5)
     plt.ylabel("Scores")
     plt.xlabel("Data Sequence")
-    plt.savefig(model_chosen+"-ValidationStats.png")
-    savefile_name = model_chosen + "-ValidationStats.txt"
+    plt.savefig("../results/"+model_chosen+"-ValidationStats.png")
+    savefile_name = "../results/" + model_chosen + "-ValidationStats.txt"
     fp = open(savefile_name, 'w')
     print "******** Evaluation **********\n"
     fp.write("******** Evaluation **********\n")
