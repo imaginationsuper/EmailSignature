@@ -93,7 +93,7 @@ def load_data(path_to_data):
     data_neg = []
     #sigwords = []
     try:
-        fesig = open(path_to_data + "TotalSignatures.txt", 'r')
+        fesig = open(path_to_data + "TotalSignaturesA.txt", 'r')
         fecont = open(path_to_data + "train_content.txt", 'r')
         for line in fesig: # read in email signatures
             sigwords = line.lower().split()
