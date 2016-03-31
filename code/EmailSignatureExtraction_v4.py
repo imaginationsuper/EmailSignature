@@ -39,11 +39,12 @@ def main():
               "DT": sklearn.tree.DecisionTreeClassifier(), \
               "NBayes": sklearn.naive_bayes.GaussianNB(), \
               "NNeighbors": sklearn.neighbors.nearest_centroid.NearestCentroid()}
-    model_chosen = "DT"
+    model_chosen = "NNeighbors"
     print "Classifier Type:", model_chosen
     for binIndex in range(NUM_OF_BINS):
         print "Experiment on DataSet#", str(binIndex)
-        random.shuffle(data_pos), random.shuffle(data_neg)
+        random.shuffle(data_pos)
+        random.shuffle(data_neg)
         size_pos_bin, size_neg_bin = int(len(data_pos)*SAMPLE_SIZE_RATIO), int(len(data_neg)*SAMPLE_SIZE_RATIO)
         data_pos_bin, data_neg_bin = data_pos[:size_pos_bin], data_neg[:size_neg_bin] # dataset bin
         sFscores_iter_ns, sRecalls_iter_ns, sPrecisions_iter_ns = list(), list(), list()
@@ -177,10 +178,10 @@ def save_stats(stats_Fscores_ns, stats_recalls_ns, stats_precisions_ns, stats_Fs
         plt.figure()
         numOfBins = len(median_Fscores_ns)
         dataBinIndex = [i for i in range(numOfBins)]
-        plt.plot(dataBinIndex, median_Fscores_ns, color="blue", marker='o', linewidth=2, label="non-SMOTE_median")
-        plt.plot(dataBinIndex, median_Fscores_ws, color="red", marker='o', linewidth=2, label="SMOTE_median")
-        plt.plot(dataBinIndex, iqr_Fscores_ns, color="blue", marker='o', linestyle='--', linewidth=2, label="non-SMOTE_iqr")
-        plt.plot(dataBinIndex, iqr_Fscores_ws, color="red", marker='o', linestyle='--', linewidth=2, label="SMOTE_iqr")
+        plt.plot(dataBinIndex, median_Fscores_ns, color="blue", linewidth=2, label="non-SMOTE_median")
+        plt.plot(dataBinIndex, median_Fscores_ws, color="green", linewidth=2, label="SMOTE_median")
+        plt.plot(dataBinIndex, iqr_Fscores_ns, color="blue", linestyle='--', linewidth=2, label="non-SMOTE_iqr")
+        plt.plot(dataBinIndex, iqr_Fscores_ws, color="green", linestyle='--', linewidth=2, label="SMOTE_iqr")
         plt.ylim([0, 1.0])
         plt.legend(loc=0, borderaxespad=0.5, frameon=False)
         plt.ylabel("F-scores")
