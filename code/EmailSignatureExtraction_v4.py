@@ -39,7 +39,7 @@ def main():
               "DT": sklearn.tree.DecisionTreeClassifier(), \
               "NBayes": sklearn.naive_bayes.GaussianNB(), \
               "NNeighbors": sklearn.neighbors.nearest_centroid.NearestCentroid()}
-    model_chosen = "NNeighbors"
+    model_chosen = "DT"
     print "Classifier Type:", model_chosen
     for binIndex in range(NUM_OF_BINS):
         print "Experiment on DataSet#", str(binIndex)
@@ -132,47 +132,47 @@ def save_stats(stats_Fscores_ns, stats_recalls_ns, stats_precisions_ns, stats_Fs
         fp.write("******** Evaluation **********\n")
         fp.write("non-SMOTE" + '\n')
         for index in range(len(median_Fscores_ns)):
-            fp.write("\t Bin#"+str(index))
+            fp.write("\t Bin#"+str(index)+',')
         fp.write('\n'+"Fscore_median:" + '\n')
         for value in median_Fscores_ns:
-            fp.write("\t %.5f" % (value))
+            fp.write("\t %.5f," % (value))
         fp.write('\n' + "recall_median:" + '\n')
         for value in median_recalls_ns:
-            fp.write("\t %.5f"% (value))
+            fp.write("\t %.5f,"% (value))
         fp.write('\n' + "precision_median:" + '\n')
         for value in median_precisions_ns:
-            fp.write("\t %.5f" % (value))
+            fp.write("\t %.5f," % (value))
         fp.write('\n' + "iqr_Fscore:" + '\n')
         for value in iqr_Fscores_ns:
-            fp.write("\t %.5f" % (value))
+            fp.write("\t %.5f," % (value))
         fp.write('\n' + "iqr_recall:" + '\n')
         for value in iqr_recalls_ns:
-            fp.write("\t %.5f" % (value))
+            fp.write("\t %.5f," % (value))
         fp.write('\n' + "iqr_precisions:" + '\n')
         for value in iqr_precisions_ns:
-            fp.write("\t %.5f" % (value))
+            fp.write("\t %.5f," % (value))
         fp.write('\n')
         fp.write("******** Evaluation **********\n")
         for index in range(len(median_Fscores_ws)):
-            fp.write("\t Bin#" + str(index))
+            fp.write("\t Bin#" + str(index)+',')
         fp.write('\n' + "Fscore_median:" + '\n')
         for value in median_Fscores_ws:
-            fp.write("\t %.5f" % (value))
+            fp.write("\t %.5f," % (value))
         fp.write('\n' + "recall_median:" + '\n')
         for value in median_recalls_ws:
-            fp.write("\t %.5f" % (value))
+            fp.write("\t %.5f," % (value))
         fp.write('\n' + "precision_median:" + '\n')
         for value in median_precisions_ws:
-            fp.write("\t %.5f" % (value))
+            fp.write("\t %.5f," % (value))
         fp.write('\n' + "iqr_Fscore:" + '\n')
         for value in iqr_Fscores_ws:
-            fp.write("\t %.5f" % (value))
+            fp.write("\t %.5f," % (value))
         fp.write('\n' + "iqr_recall:" + '\n')
         for value in iqr_recalls_ws:
-            fp.write("\t %.5f" % (value))
+            fp.write("\t %.5f," % (value))
         fp.write('\n' + "iqr_precisions:" + '\n')
         for value in iqr_precisions_ws:
-            fp.write("\t %.5f" % (value))
+            fp.write("\t %.5f," % (value))
         fp.close()
         plt.figure()
         numOfBins = len(median_Fscores_ns)
@@ -182,7 +182,7 @@ def save_stats(stats_Fscores_ns, stats_recalls_ns, stats_precisions_ns, stats_Fs
         plt.plot(dataBinIndex, iqr_Fscores_ns, color="blue", marker='o', linestyle='--', linewidth=2, label="non-SMOTE_iqr")
         plt.plot(dataBinIndex, iqr_Fscores_ws, color="red", marker='o', linestyle='--', linewidth=2, label="SMOTE_iqr")
         plt.ylim([0, 1.0])
-        plt.legend(loc=4, borderaxespad=0.5)
+        plt.legend(loc=0, borderaxespad=0.5, frameon=False)
         plt.ylabel("F-scores")
         plt.xlabel("Data Bin Index")
         plt.savefig(saveplot_name)
@@ -328,9 +328,9 @@ def cross_validationS(dataset_pos_veclist, dataset_neg_veclist, model, num_cross
             size_pos = len(train_pos_dataset)
             size_neg = len(train_neg_dataset)
             if (size_pos > size_neg*(1+SIZE_DIFF_TOL)): # check size and apply SMOTE
-                train_neg_dataset = SMOTE(train_neg_dataset, size_pos, num_neighbors=3)
+                train_neg_dataset = SMOTE(train_neg_dataset, size_pos, num_neighbors=4)
             elif (size_neg > size_pos*(1+SIZE_DIFF_TOL)):
-                train_pos_dataset = SMOTE(train_pos_dataset, size_neg, num_neighbors=3)
+                train_pos_dataset = SMOTE(train_pos_dataset, size_neg, num_neighbors=4)
             size_pos = len(train_pos_dataset)
             size_neg = len(train_neg_dataset)
             #print size_pos, size_neg

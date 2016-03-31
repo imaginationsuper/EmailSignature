@@ -2,29 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67388466-73ff-441f-a158-9bb6778f1de4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/EmailBody.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/MarkedEmail.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/MarkedSignatures.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/getMarkedEmails.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/DT-ValidationStats.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/DT-ValidationStats.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/Logit-ValidationStats.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/Logit-ValidationStats.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/NBayes-ValidationStats.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/NBayes-ValidationStats.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/NNeighbors-ValidationStats.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/NNeighbors-ValidationStats.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/SVC-ValidationStats.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/SVC-ValidationStats.txt" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/DT-ValidationStats.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/NNeighbors-ValidationStats.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/DT-ValidationStats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/NNeighbors-ValidationStats.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/EmailSignatureExtraction_v3.py" afterPath="$PROJECT_DIR$/code/EmailSignatureExtraction_v3.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TotalSignaturesA.txt" afterPath="$PROJECT_DIR$/data/TotalSignaturesA.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/train_content.txt" afterPath="$PROJECT_DIR$/data/train_content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py" afterPath="$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py" />
     </list>
     <ignored path="EmailSignature.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
+    <ignored path="code/GoogleNews-vectors-negative300.bin.gz" />
+    <ignored path="code/doc2vec_model.dvm" />
+    <ignored path="archive/Abcd.py" />
+    <ignored path="code/doc2vec_model.dvm.syn0.npy" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +27,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/EmailSignature$EmailSignatureExtraction_v3.coverage" NAME="EmailSignatureExtraction_v3 Coverage Results" MODIFIED="1459358467037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
     <SUITE FILE_PATH="coverage/EmailSignature$EmailSignatureExtraction_v2.coverage" NAME="EmailSignatureExtraction_v2 Coverage Results" MODIFIED="1458932821529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
-    <SUITE FILE_PATH="coverage/EmailSignature$EmailSignatureExtraction_v4.coverage" NAME="EmailSignatureExtraction_v4 Coverage Results" MODIFIED="1459401361679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/EmailSignature$EmailSignatureExtraction_v4.coverage" NAME="EmailSignatureExtraction_v4 Coverage Results" MODIFIED="1459404271367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -74,8 +65,8 @@
       <file leaf-file-name="EmailSignatureExtraction_v4.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1545">
-              <caret line="181" column="73" selection-start-line="181" selection-start-column="73" selection-end-line="181" selection-end-column="73" />
+            <state relative-caret-position="570">
+              <caret line="330" column="86" selection-start-line="330" selection-start-column="86" selection-end-line="330" selection-end-column="86" />
               <folding>
                 <element signature="e#22#32#0" expanded="true" />
               </folding>
@@ -523,6 +514,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="67388466-73ff-441f-a158-9bb6778f1de4" name="Default" comment="" />
@@ -685,7 +679,14 @@
       <option name="project" value="LOCAL" />
       <updated>1459355719133</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="update new code v4">
+      <created>1459401423768</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1459401423768</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -722,13 +723,22 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update files" />
     <MESSAGE value="update files and code" />
-    <option name="LAST_COMMIT_MESSAGE" value="update files and code" />
+    <MESSAGE value="update new code v4" />
+    <option name="LAST_COMMIT_MESSAGE" value="update new code v4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -829,8 +839,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
-          <caret line="181" column="73" selection-start-line="181" selection-start-column="73" selection-end-line="181" selection-end-column="73" />
+        <state relative-caret-position="570">
+          <caret line="330" column="86" selection-start-line="330" selection-start-column="86" selection-end-line="330" selection-end-column="86" />
           <folding>
             <element signature="e#22#32#0" expanded="true" />
           </folding>
