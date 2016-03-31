@@ -43,7 +43,7 @@ def main():
                       "DT": sklearn.tree.DecisionTreeClassifier(), \
                       "NBayes": sklearn.naive_bayes.GaussianNB(), \
                       "NNeighbors": sklearn.neighbors.nearest_centroid.NearestCentroid()}
-            model_chosen = "Logit"
+            model_chosen = "SVC"
             accuracys, precisions, recalls, Fscores = cross_validationS(\
                 data_pos_vec, data_neg_vec, models[model_chosen], num_cross=NUM_OF_CROSSFOLD, smote_flag=test_mode) # cross validation
             sFscores.extend(Fscores)
