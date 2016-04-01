@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67388466-73ff-441f-a158-9bb6778f1de4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/Logit-ValidationStats.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/DT-ValidationStats.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/Logit-ValidationStats.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/DT-ValidationStats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/SVC-ValidationStats.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/SVC-ValidationStats.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py" afterPath="$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py" />
     </list>
@@ -27,7 +25,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/EmailSignature$EmailSignatureExtraction_v3.coverage" NAME="EmailSignatureExtraction_v3 Coverage Results" MODIFIED="1459358467037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
     <SUITE FILE_PATH="coverage/EmailSignature$EmailSignatureExtraction_v2.coverage" NAME="EmailSignatureExtraction_v2 Coverage Results" MODIFIED="1458932821529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
-    <SUITE FILE_PATH="coverage/EmailSignature$EmailSignatureExtraction_v4.coverage" NAME="EmailSignatureExtraction_v4 Coverage Results" MODIFIED="1459473976487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/EmailSignature$EmailSignatureExtraction_v4.coverage" NAME="EmailSignatureExtraction_v4 Coverage Results" MODIFIED="1459517308187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -41,8 +39,8 @@
       <file leaf-file-name="EmailSignatureExtraction_v4.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+            <state relative-caret-position="225">
+              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
               <folding>
                 <element signature="e#22#32#0" expanded="true" />
               </folding>
@@ -683,7 +681,14 @@
       <option name="project" value="LOCAL" />
       <updated>1459470642203</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="update results">
+      <created>1459473987592</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1459473987592</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -837,8 +842,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        <state relative-caret-position="225">
+          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
           <folding>
             <element signature="e#22#32#0" expanded="true" />
           </folding>
