@@ -17,9 +17,9 @@ EXIT_FAILURE = -1
 EXIT_SUCCESS = 0
 NUM_OF_ITERATION = 10 # number of iteration for random order of data entries
 NUM_OF_CROSSFOLD = 5 # number of cross-validation
-NUM_OF_BINS = 15 # number of dataset bins
+NUM_OF_BINS = 10 # number of dataset bins
 SIZE_DIFF_TOL = 0.001 # tolerance of majority and minority data size difference ratio
-SAMPLE_SIZE_RATIO = 0.6 # percentage of total dataset used in the current experiment
+SAMPLE_SIZE_RATIO = 0.4 # percentage of total dataset used in the current experiment
 
 def main():
     """
@@ -39,7 +39,7 @@ def main():
               "DT": sklearn.tree.DecisionTreeClassifier(), \
               "NBayes": sklearn.naive_bayes.GaussianNB(), \
               "NNeighbors": sklearn.neighbors.nearest_centroid.NearestCentroid()}
-    model_chosen = "NNeighbors"
+    model_chosen = "Logit"
     print "Classifier Type:", model_chosen
     for binIndex in range(NUM_OF_BINS):
         print "Experiment on DataSet#", str(binIndex)
@@ -77,7 +77,6 @@ def main():
     print "All Experiments Done!"
     save_stats(stats_Fscores_ns, stats_recalls_ns, stats_precisions_ns, stats_Fscores_ws, stats_recalls_ws,\
                stats_precisions_ws, model_name=model_chosen)
-    #plot_stats(stats_Fscores_ns, stats_Fscores_ws, title="Fscores", model_name=model_chosen)
     print "Statistics ready!"
 
 def save_stats(stats_Fscores_ns, stats_recalls_ns, stats_precisions_ns, stats_Fscores_ws, stats_recalls_ws, \
