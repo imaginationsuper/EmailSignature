@@ -39,7 +39,7 @@ def main():
               "DT": sklearn.tree.DecisionTreeClassifier(), \
               "NBayes": sklearn.naive_bayes.GaussianNB(), \
               "NNeighbors": sklearn.neighbors.nearest_centroid.NearestCentroid()}
-    model_chosen = "Logit"
+    model_chosen = "SVC"
     print "Classifier Type:", model_chosen
     for binIndex in range(NUM_OF_BINS):
         print "Experiment on DataSet#", str(binIndex)
