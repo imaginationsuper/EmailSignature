@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67388466-73ff-441f-a158-9bb6778f1de4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/SVC-ValidationStats.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/SVC-ValidationStats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/NBayes-ValidationStats.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/NBayes-ValidationStats.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py" afterPath="$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py" />
     </list>
     <ignored path="EmailSignature.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="EmailSignatureExtraction_v4.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+            <state relative-caret-position="240">
+              <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
               <folding>
                 <element signature="e#22#32#0" expanded="true" />
               </folding>
@@ -688,7 +687,14 @@
       <option name="project" value="LOCAL" />
       <updated>1459473987592</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="update results">
+      <created>1459517325341</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1459517325341</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -842,8 +848,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+        <state relative-caret-position="240">
+          <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
           <folding>
             <element signature="e#22#32#0" expanded="true" />
           </folding>
