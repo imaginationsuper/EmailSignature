@@ -153,6 +153,7 @@ def save_stats(stats_Fscores_ns, stats_recalls_ns, stats_precisions_ns, stats_Fs
             fp.write("\t %.5f," % (value))
         fp.write('\n')
         fp.write("******** Evaluation **********\n")
+        fp.write("SMOTE" + '\n')
         for index in range(len(median_Fscores_ws)):
             fp.write("\t Bin#" + str(index)+',')
         fp.write('\n' + "Fscore_median:" + '\n')

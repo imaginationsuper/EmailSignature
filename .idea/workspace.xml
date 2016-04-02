@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67388466-73ff-441f-a158-9bb6778f1de4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/NBayes-ValidationStats.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/NBayes-ValidationStats.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/DT-ValidationStatsPlot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/Logit-ValidationStatsPlot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/NBayes-ValidationStatsPlot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/NNeighbors-ValidationStatsPlot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/SVC-ValidationStatsPlot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/make_plot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py" afterPath="$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/DT-ValidationStats.csv" afterPath="$PROJECT_DIR$/results/DT-ValidationStats.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/Logit-ValidationStats.csv" afterPath="$PROJECT_DIR$/results/Logit-ValidationStats.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/NBayes-ValidationStats.csv" afterPath="$PROJECT_DIR$/results/NBayes-ValidationStats.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/NNeighbors-ValidationStats.csv" afterPath="$PROJECT_DIR$/results/NNeighbors-ValidationStats.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/SVC-ValidationStats.csv" afterPath="$PROJECT_DIR$/results/SVC-ValidationStats.csv" />
     </list>
     <ignored path="EmailSignature.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,6 +34,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/EmailSignature$EmailSignatureExtraction_v3.coverage" NAME="EmailSignatureExtraction_v3 Coverage Results" MODIFIED="1459358467037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
     <SUITE FILE_PATH="coverage/EmailSignature$EmailSignatureExtraction_v2.coverage" NAME="EmailSignatureExtraction_v2 Coverage Results" MODIFIED="1458932821529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/EmailSignature$make_plot.coverage" NAME="make_plot Coverage Results" MODIFIED="1459570692625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/results" />
     <SUITE FILE_PATH="coverage/EmailSignature$EmailSignatureExtraction_v4.coverage" NAME="EmailSignatureExtraction_v4 Coverage Results" MODIFIED="1459517308187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -35,14 +46,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EmailSignatureExtraction_v4.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmailSignatureExtraction_v4.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+            <state relative-caret-position="282">
+              <caret line="179" column="52" selection-start-line="178" selection-start-column="8" selection-end-line="179" selection-end-column="52" />
               <folding>
                 <element signature="e#22#32#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="make_plot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/results/make_plot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="30" column="75" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
+              <folding>
+                <element signature="e#22#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DT-ValidationStats.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/results/DT-ValidationStats.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,6 +103,12 @@
         <option value="$PROJECT_DIR$/code/EmailSignatureExtraction_v2.py" />
         <option value="$PROJECT_DIR$/code/EmailSignatureExtraction_v3.py" />
         <option value="$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py" />
+        <option value="$PROJECT_DIR$/results/DT-ValidationStats.csv" />
+        <option value="$PROJECT_DIR$/results/Logit-ValidationStats.csv" />
+        <option value="$PROJECT_DIR$/results/NBayes-ValidationStats.csv" />
+        <option value="$PROJECT_DIR$/results/NNeighbors-ValidationStats.csv" />
+        <option value="$PROJECT_DIR$/results/SVC-ValidationStats.csv" />
+        <option value="$PROJECT_DIR$/results/make_plot.py" />
       </list>
     </option>
   </component>
@@ -108,7 +147,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -140,6 +178,10 @@
               <option name="myItemId" value="EmailSignature" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -164,6 +206,16 @@
               <option name="myItemId" value="EmailSignature" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EmailSignature" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EmailSignature" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="code" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -171,6 +223,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -188,7 +241,7 @@
       </console-settings>
     </option>
   </component>
-  <component name="RunManager" selected="Python.EmailSignatureExtraction_v4">
+  <component name="RunManager" selected="Python.make_plot">
     <configuration default="false" name="EmailSignatureExtraction_v1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -258,6 +311,24 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py" />
       <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="make_plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/results" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="EmailSignature" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/results/make_plot.py" />
+      <option name="PARAMETERS" value="SVC" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
@@ -469,18 +540,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.EmailSignatureExtraction_v1" />
       <item index="1" class="java.lang.String" itemvalue="Python.EmailSignatureExtraction_v2" />
       <item index="2" class="java.lang.String" itemvalue="Python.EmailSignatureExtraction_v3" />
       <item index="3" class="java.lang.String" itemvalue="Python.EmailSignatureExtraction_v4" />
+      <item index="4" class="java.lang.String" itemvalue="Python.make_plot" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.EmailSignatureExtraction_v4" />
-        <item index="1" class="java.lang.String" itemvalue="Python.EmailSignatureExtraction_v3" />
-        <item index="2" class="java.lang.String" itemvalue="Python.EmailSignatureExtraction_v2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.EmailSignatureExtraction_v1" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.make_plot" />
+        <item index="1" class="java.lang.String" itemvalue="Python.EmailSignatureExtraction_v4" />
+        <item index="2" class="java.lang.String" itemvalue="Python.EmailSignatureExtraction_v3" />
+        <item index="3" class="java.lang.String" itemvalue="Python.EmailSignatureExtraction_v2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.EmailSignatureExtraction_v1" />
       </list>
     </recent_temporary>
   </component>
@@ -694,7 +767,14 @@
       <option name="project" value="LOCAL" />
       <updated>1459517325341</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="update results">
+      <created>1459528480234</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1459528480234</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView">
@@ -710,19 +790,19 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09773829" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14054927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.50277996" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875606" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20821919" sideWeight="0.49722" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20765027" sideWeight="0.49722" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24657534" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3989071" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -763,6 +843,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#22#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/code/EmailSignatureExtraction_v2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -846,10 +936,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py">
+    <entry file="file://$PROJECT_DIR$/results/SVC-ValidationStats.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/NNeighbors-ValidationStats.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/NBayes-ValidationStats.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/Logit-ValidationStats.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="936" column="0" selection-start-line="936" selection-start-column="0" selection-end-line="936" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/DT-ValidationStats.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/EmailSignatureExtraction_v4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="179" column="52" selection-start-line="178" selection-start-column="8" selection-end-line="179" selection-end-column="52" />
+          <folding>
+            <element signature="e#22#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/make_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="30" column="75" selection-start-line="30" selection-start-column="75" selection-end-line="30" selection-end-column="75" />
           <folding>
             <element signature="e#22#32#0" expanded="true" />
           </folding>
